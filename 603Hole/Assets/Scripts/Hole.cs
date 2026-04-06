@@ -6,6 +6,11 @@ public class Hole : MonoBehaviour
     [SerializeField] private GameObject coinPrefab; // Prefab for the coin to spawn
 
     [SerializeField] private int coinsToSpawn = 1; // Number of coins to spawn when the hole is clicked
+
+    [SerializeField] private float horizDistFromEdge = 2;
+    
+    [SerializeField] private float vertDistFromEdge = 2;
+
     public int CoinsToSpawn { get { return coinsToSpawn; } set { coinsToSpawn = value; } }
 
     private int width;
@@ -35,7 +40,7 @@ public class Hole : MonoBehaviour
     {
         GameObject newCoin = Instantiate(coinPrefab, transform.position, Quaternion.identity);
         float theta = Random.Range(0, 2 * Mathf.PI);
-        newCoin.transform.position += new Vector3(Mathf.Cos(theta) * (width + 3f) / 2, Mathf.Sin(theta) * (height + 3f) / 2, 100);
+        newCoin.transform.position += new Vector3(Mathf.Cos(theta) * (width + horizDistFromEdge) / 2, Mathf.Sin(theta) * (height + vertDistFromEdge) / 2, 100);
     }
 
 }

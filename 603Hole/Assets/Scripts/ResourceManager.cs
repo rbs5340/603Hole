@@ -9,8 +9,19 @@ public class ResourceManager : MonoBehaviour
     [SerializeField] private int stone = 0;
     [SerializeField] private int goop = 0;
 
+    [SerializeField] private IconDisplayUI iconDisplay;
+
+
     //Getters and setters for the resources
-    public int Coins { get { return coins; } set { coins = value; } }
+    public int Coins { 
+        get { return coins; } 
+        
+        set { 
+            coins = value; 
+            iconDisplay.SetDisplayNumer(coins);
+            iconDisplay.SetIconCount(coins);
+        } 
+    }
     public int Wood { get { return coins; } set { coins = value; } }
     public int Water { get { return coins; } set { coins = value; } }
     public int Stone { get { return coins; } set { coins = value; } }
@@ -31,6 +42,8 @@ public class ResourceManager : MonoBehaviour
         {
             _instance = this;
         }
+
+        iconDisplay = FindAnyObjectByType<IconDisplayUI>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
