@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5046778140518692152}
   - component: {fileID: 8644252707745349955}
+  - component: {fileID: 4383356414840504678}
+  - component: {fileID: 7927278316879548357}
   m_Layer: 0
   m_Name: PersistentManagers
   m_TagString: Untagged
@@ -45,3 +47,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
+--- !u!114 &4383356414840504678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683279364982660979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb1e2ecf5162434db2e2f53e03f907b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 0
+  wood: 0
+  water: 0
+  stone: 0
+  goop: 0
+  iconDisplay: {fileID: 0}
+--- !u!114 &7927278316879548357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683279364982660979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7db2e6d059016b4ebc9ffa09f5581be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hole: {fileID: 0}
+  holeUpgradeCost: 1

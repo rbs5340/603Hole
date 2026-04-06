@@ -11,6 +11,8 @@ public class Hole : MonoBehaviour
     
     [SerializeField] private float vertDistFromEdge = 2;
 
+    [SerializeField] private float amountFilled = 0;
+
     public int CoinsToSpawn { get { return coinsToSpawn; } set { coinsToSpawn = value; } }
 
     private int width;
@@ -20,6 +22,11 @@ public class Hole : MonoBehaviour
     {
         width = (int)gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
         height = (int)gameObject.GetComponent<SpriteRenderer>().bounds.size.y;
+    }
+
+    private void OnEnable()
+    {
+        
     }
 
     // Update is called once per frame
@@ -33,14 +40,19 @@ public class Hole : MonoBehaviour
         for(int i = 0; i < coinsToSpawn; i++)
         {
             SpawnCoin();
+            amountFilled += coinsToSpawn;
+            FillProgressUI.SetProgress(amountFilled);
         }
     }
 
     public void SpawnCoin()
     {
-        GameObject newCoin = Instantiate(coinPrefab, transform.position, Quaternion.identity);
         float theta = Random.Range(0, 2 * Mathf.PI);
-        newCoin.transform.position += new Vector3(Mathf.Cos(theta) * (width + horizDistFromEdge) / 2, Mathf.Sin(theta) * (height + vertDistFromEdge) / 2, 100);
+        Vector3 pos = new Vector3(Mathf.Cos(theta) * (width + horizDistFromEdge) / 2, Mathf.Sin(theta) * (height + vertDistFromEdge) / 2, 100);
+        pos += transform.position;
+        GameObject newCoin = Instantiate(coinPrefab, pos, Quaternion.identity);
+
+        Debug.Log(newCoin.transform.position);
     }
 
 }

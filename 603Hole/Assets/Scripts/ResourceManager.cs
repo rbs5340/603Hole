@@ -43,12 +43,11 @@ public class ResourceManager : MonoBehaviour
             _instance = this;
         }
 
-        iconDisplay = FindAnyObjectByType<IconDisplayUI>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
-        
+        iconDisplay = FindAnyObjectByType<IconDisplayUI>();
     }
 
     // Update is called once per frame

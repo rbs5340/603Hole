@@ -17,6 +17,7 @@ public class Coin : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("Collected Coin!");
         ResourceManager.Instance.Coins += coinValue;
         Destroy(gameObject);
     }

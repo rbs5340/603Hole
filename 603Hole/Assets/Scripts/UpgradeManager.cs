@@ -22,6 +22,11 @@ public class UpgradeManager : MonoBehaviour
             _instance = this;
         }
 
+        
+    }
+
+    private void OnEnable()
+    {
         hole = FindAnyObjectByType<Hole>();
     }
 
