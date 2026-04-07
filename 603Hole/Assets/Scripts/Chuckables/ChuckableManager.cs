@@ -11,7 +11,7 @@ public class ChuckableManager : MonoSingleton<ChuckableManager>
     public List<Chuckable> Chuckables => chuckables.ToList();
 
     //This should redirect to actual resource manager
-    int currentGold => 999;
+    int currentGold => ResourceManager.Instance.Coins;
 
     protected override void Awake()
     {
@@ -34,5 +34,6 @@ public class ChuckableManager : MonoSingleton<ChuckableManager>
     {
         //TODO: consume resource, apply effect etc.
         Debug.Log($"Bought {chuckable.Name}!");
+        ResourceManager.Instance.Coins -= chuckable.GoldReq;
     }
 }
