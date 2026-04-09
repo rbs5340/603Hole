@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94772905dacc764e87c7d56682592cf, type: 3}
+  m_Name: Heavy Shoes
+  m_EditorClassIdentifier: 
+  Name: Heavy Shoes
+  Icon: {fileID: -6621794599060590567, guid: 87050d499e2230b4aa7aae8d8a3c8ae2, type: 3}
+  HFU: 10
+  GoldReq: 20
+  WoodReq: 10
+  WaterReq: 0
+  StoneReq: 0
+  GoopReq: 0
