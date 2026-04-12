@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class ResourceManager : MonoBehaviour
 
     [SerializeField] private IconDisplayUI iconDisplay;
 
+    public bool CoinBoost { get; private set; }
+    public float BoostTime { get; private set; }
 
     //Getters and setters for the resources
     public int Coins
@@ -56,6 +59,23 @@ public class ResourceManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void BoostCoinIncome(float time)
+    {
+        //Assume that we won't trigger another boost before one ends.
+        StartCoroutine(BoostCountdownCoroutine(time));
+    }
+    IEnumerator BoostCountdownCoroutine(float time)
+    {
+        CoinBoost = true;
+        BoostTime = time;
+        while (BoostTime > 0)
+        {
+            yield return null;
+            BoostTime -= Time.deltaTime;
+        }
+        CoinBoost = false;
     }
 
     public float CurrentResourceSum => WeightedSum(Instance.Coins, 0, 0, 0, 0);

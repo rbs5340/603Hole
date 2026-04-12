@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8644252707745349955}
   - component: {fileID: 4383356414840504678}
   - component: {fileID: 7927278316879548357}
+  - component: {fileID: 9173674037396844304}
+  - component: {fileID: 7059161183075417645}
   m_Layer: 0
   m_Name: PersistentManagers
   m_TagString: Untagged
@@ -79,3 +81,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hole: {fileID: 0}
   holeUpgradeCost: 1
+--- !u!114 &9173674037396844304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683279364982660979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03285710960955449453057a1c0541a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+--- !u!114 &7059161183075417645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683279364982660979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4964f37d5be6c554ba1505a59773bfd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  clip: {fileID: 32900000, guid: afd33f6c261eb1447a960cb49ce16c0d, type: 3}
+  player: {fileID: 0}
+  closeButton: {fileID: 0}
+  countdown: {fileID: 0}
+  contentHolder: {fileID: 0}
+  minWatchLength: 15

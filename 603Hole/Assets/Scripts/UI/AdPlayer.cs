@@ -5,24 +5,22 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-[RequireComponent(typeof(CanvasGroup))]
 public class AdPlayer : MonoSingleton<AdPlayer>
 {
     [SerializeField] private VideoClip clip;
     [SerializeField] private VideoPlayer player;
     [SerializeField] private Button closeButton;
     [SerializeField] private TextMeshProUGUI countdown;
+    [SerializeField] private GameObject contentHolder;
 
     [SerializeField] private float minWatchLength = 15;
 
     private UnityEvent successCallback = new();
-    private CanvasGroup canvasGroup;
 
     private void Start()
     {
         player.clip = clip;
         closeButton.onClick.AddListener(StopAndClose);
-        canvasGroup = GetComponent<CanvasGroup>();
         StopAndClose();
     }
 
@@ -38,9 +36,8 @@ public class AdPlayer : MonoSingleton<AdPlayer>
     [ContextMenu("Play Ad")]
     public void OpenAndPlay()
     {
+        contentHolder.SetActive(true);
         player.Play();
-        canvasGroup.alpha = 1;
-        canvasGroup.blocksRaycasts = true;
         closeButton.gameObject.SetActive(false);
         countdown.gameObject.SetActive(true);
         StartCoroutine(WaitForPlaying(minWatchLength));
@@ -52,8 +49,7 @@ public class AdPlayer : MonoSingleton<AdPlayer>
     public void StopAndClose()
     {
         player.Stop();
-        canvasGroup.alpha = 0;
-        canvasGroup.blocksRaycasts = false;
+        contentHolder.SetActive(false);
     }
 
     IEnumerator WaitForPlaying(float waitTime)
