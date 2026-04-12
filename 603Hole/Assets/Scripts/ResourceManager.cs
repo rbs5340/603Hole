@@ -13,14 +13,16 @@ public class ResourceManager : MonoBehaviour
 
 
     //Getters and setters for the resources
-    public int Coins { 
-        get { return coins; } 
-        
-        set { 
-            coins = value; 
+    public int Coins
+    {
+        get { return coins; }
+
+        set
+        {
+            coins = value;
             iconDisplay.SetDisplayNumer(coins);
             iconDisplay.SetIconCount(coins);
-        } 
+        }
     }
     public int Wood { get { return coins; } set { coins = value; } }
     public int Water { get { return coins; } set { coins = value; } }
@@ -53,6 +55,28 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public float CurrentResourceSum => WeightedSum(Instance.Coins, 0, 0, 0, 0);
+    public float FulfillProgress(Chuckable chuckable)
+    {
+        float currentsum = WeightedSum(
+            Mathf.Min(chuckable.GoldReq, Coins),
+            Mathf.Min(chuckable.WoodReq, Wood),
+            Mathf.Min(chuckable.WaterReq, Water),
+            Mathf.Min(chuckable.StoneReq, Stone),
+            Mathf.Min(chuckable.GoopReq, Goop)
+            );
+        float totalReq = WeightedSum(chuckable);
+        return currentsum / totalReq;
+    }
+    public static float WeightedSum(Chuckable chuckable)
+    {
+        return WeightedSum(chuckable.GoldReq, chuckable.WoodReq, chuckable.WaterReq, chuckable.StoneReq, chuckable.GoopReq);
+    }
+    public static float WeightedSum(int coins, int wood, int water, int stone, int goop)
+    {
+        return coins + wood + water + stone + goop * 10;
     }
 }
