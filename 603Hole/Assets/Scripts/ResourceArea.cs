@@ -11,6 +11,8 @@ public class ResourceArea : MonoBehaviour
 
     [SerializeField] private ResourceType resourceType;
 
+    public ResourceType ResourceType { get { return resourceType; } }
+
     [SerializeField] private float workRate;
 
     [SerializeField] private TMP_Text displayResourceAmount;

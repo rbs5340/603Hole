@@ -27,6 +27,8 @@ public class ResourceManager : MonoBehaviour
     [SerializeField] private TMP_Text waluigiumDisplay;
 
 
+
+
     //Getters and setters for the resources
     public float Coins { 
         get { return coins; } 
@@ -114,6 +116,25 @@ public class ResourceManager : MonoBehaviour
             case ResourceType.Waluigium:
                 Waluigium += amount;
                 break;
+        }
+    }
+
+    public float GetResourceAmount(ResourceType resourceType)
+    {
+        switch (resourceType)
+        {
+            case ResourceType.Coins:
+                return Coins;
+            case ResourceType.Garlic:
+                return Garlic;
+            case ResourceType.Bikes:
+                return Bikes;
+            case ResourceType.Candy:
+                return Candy;
+            case ResourceType.Waluigium:
+                return Waluigium;
+            default:
+                return 0;
         }
     }
 }

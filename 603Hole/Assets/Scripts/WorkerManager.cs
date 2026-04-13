@@ -9,6 +9,8 @@ public class WorkerManager : MonoBehaviour
 
     [SerializeField] GameObject chuckPrefab;
 
+    [SerializeField] int[] workerCosts;
+
     private static WorkerManager _instance;
 
     public static WorkerManager Instance { get { return _instance; } }
@@ -39,6 +41,10 @@ public class WorkerManager : MonoBehaviour
 
     public void AddWorker(int resourceType)
     {
+        if (ResourceManager.Instance.Coins < workerCosts[resourceType])
+            return;
+
+        ResourceManager.Instance.Coins -= workerCosts[resourceType];
         //ResourceType resourceType = ResourceType.None;
         switch (resourceType)
         {
@@ -46,7 +52,7 @@ public class WorkerManager : MonoBehaviour
                 Instantiate(nabbitPrefab, gameObject.transform);
                 break;
             case (int)ResourceType.None:
-                Instantiate(chuckPrefab, gameObject.transform);
+                Instantiate(chuckPrefab);
                 break;
             case (int)ResourceType.Garlic:
                 resourceArea[0].AddWorker();

@@ -59,12 +59,7 @@ public class Hole : MonoBehaviour
 
     private void OnMouseDown()
     {
-        for(int i = 0; i < coinsToSpawn; i++)
-        {
-            SpawnCoin();
-            amountFilled += coinsToSpawn;
-            FillProgressUI.SetProgress(amountFilled);
-        }
+        FillHole(coinsToSpawn);
     }
 
     public void SpawnCoin()
@@ -74,6 +69,16 @@ public class Hole : MonoBehaviour
         pos += transform.position;
         GameObject newCoin = Instantiate(coinPrefab, pos, Quaternion.identity);
         coins.Add(newCoin.GetComponent<Coin>());
+    }
+
+    public void FillHole(float amount)
+    {
+        amountFilled += amount;
+        FillProgressUI.SetProgress(amountFilled);
+        for(int i = 0; i < amount; i++)
+        {
+            SpawnCoin();
+        }
     }
 
 }

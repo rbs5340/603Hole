@@ -5896,6 +5896,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6328942911760649015, guid: 45331e89155f47646a527cd7ec36caf2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6868638430093667374, guid: 45331e89155f47646a527cd7ec36caf2, type: 3}
       propertyPath: m_Name
       value: Hole
@@ -8699,7 +8703,8 @@ MonoBehaviour:
   - {fileID: 1220587919}
   - {fileID: 1839290373}
   nabbitPrefab: {fileID: 5863659719612360251, guid: a64ac0ecb8a32d34db61f0ccaf20a4cf, type: 3}
-  chuckPrefab: {fileID: 8648284499346669878, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
+  chuckPrefab: {fileID: 1445148124369609222, guid: 65d2c2228d30c9841828f41b1e1bfcf4, type: 3}
+  workerCosts: 050000000500000005000000050000000f00000005000000
 --- !u!1001 &4705486713256339123
 PrefabInstance:
   m_ObjectHideFlags: 0
