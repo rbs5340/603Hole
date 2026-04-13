@@ -14,7 +14,7 @@ public enum ResourceType
 public class ResourceManager : MonoBehaviour
 {
     //All the player's resources
-    [SerializeField] private int coins = 0;
+    [SerializeField] private float coins = 0;
     [SerializeField] private float garlic = 0;
     [SerializeField] private float candy = 0;
     [SerializeField] private float bikes = 0;
@@ -28,12 +28,12 @@ public class ResourceManager : MonoBehaviour
 
 
     //Getters and setters for the resources
-    public int Coins { 
+    public float Coins { 
         get { return coins; } 
         
         set { 
             coins = value;
-            coinDisplay.text = coins.ToString();
+            coinDisplay.text = ((int)coins).ToString();
         } 
     }
     public float Garlic { get { return garlic; } 
@@ -97,11 +97,10 @@ public class ResourceManager : MonoBehaviour
 
     public void AddResource(ResourceType resourceType, float amount)
     {
-        Debug.Log($"Adding {amount} of {resourceType}");
         switch (resourceType)
         {
             case ResourceType.Coins:
-                Coins += (int)amount;
+                Coins += amount;
                 break;
             case ResourceType.Garlic:
                 Garlic += amount;

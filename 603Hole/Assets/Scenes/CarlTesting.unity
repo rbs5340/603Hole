@@ -2230,6 +2230,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
+      propertyPath: workerWages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: maxResources
       value: 100
       objectReference: {fileID: 0}
@@ -5929,6 +5933,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
+      propertyPath: workerWages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: maxResources
       value: 100
       objectReference: {fileID: 0}
@@ -6460,6 +6468,10 @@ PrefabInstance:
     - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: regenRate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
+      propertyPath: workerWages
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: maxResources
@@ -7560,6 +7572,10 @@ PrefabInstance:
     - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: regenRate
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
+      propertyPath: workerWages
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1374733812371793946, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: maxResources

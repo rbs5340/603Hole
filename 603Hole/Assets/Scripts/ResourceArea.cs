@@ -15,6 +15,8 @@ public class ResourceArea : MonoBehaviour
 
     [SerializeField] private TMP_Text displayResourceAmount;
 
+    [SerializeField] private float workerWages;
+
     private int numWorkers;
 
     private float numResources;
@@ -27,6 +29,18 @@ public class ResourceArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float wagesCost = numWorkers * workerWages * Time.deltaTime;
+
+        if(ResourceManager.Instance.Coins < wagesCost)
+        {
+            return;
+        }
+        else
+        {
+            ResourceManager.Instance.Coins -= wagesCost;
+        }
+
+
 
         float resourcesCollected = workRate * numWorkers * Time.deltaTime;
 
