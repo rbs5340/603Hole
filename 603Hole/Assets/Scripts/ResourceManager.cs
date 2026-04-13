@@ -15,10 +15,10 @@ public class ResourceManager : MonoBehaviour
 {
     //All the player's resources
     [SerializeField] private int coins = 0;
-    [SerializeField] private int garlic = 0;
-    [SerializeField] private int candy = 0;
-    [SerializeField] private int bikes = 0;
-    [SerializeField] private int waluigium = 0;
+    [SerializeField] private float garlic = 0;
+    [SerializeField] private float candy = 0;
+    [SerializeField] private float bikes = 0;
+    [SerializeField] private float waluigium = 0;
 
     [SerializeField] private TMP_Text coinDisplay;
     [SerializeField] private TMP_Text garlicDisplay;
@@ -36,32 +36,32 @@ public class ResourceManager : MonoBehaviour
             coinDisplay.text = coins.ToString();
         } 
     }
-    public int Garlic { get { return garlic; } 
+    public float Garlic { get { return garlic; } 
         set { 
             garlic = value;
-            garlicDisplay.text = garlic.ToString();
+            garlicDisplay.text = ((int)garlic).ToString();
         } 
     }
-    public int Candy { get { return candy; } 
+    public float Candy { get { return candy; } 
         set 
         { 
             candy = value;
-            candyDisplay.text = candy.ToString();
+            candyDisplay.text = ((int)candy).ToString();
         }
     }
-    public int Bikes { get { return bikes; } 
+    public float Bikes { get { return bikes; } 
         set 
         { 
             bikes = value;
-            bikesDisplay.text = bikes.ToString();
+            bikesDisplay.text = ((int)bikes).ToString();
 
         }
     }
-    public int Waluigium { get { return waluigium; } 
+    public float Waluigium { get { return waluigium; } 
         set 
         { 
             waluigium = value;
-            waluigiumDisplay.text = waluigium.ToString();
+            waluigiumDisplay.text = ((int)waluigium).ToString();
 
         }
     }
@@ -95,13 +95,13 @@ public class ResourceManager : MonoBehaviour
         
     }
 
-    public void AddResource(ResourceType resourceType, int amount)
+    public void AddResource(ResourceType resourceType, float amount)
     {
         Debug.Log($"Adding {amount} of {resourceType}");
         switch (resourceType)
         {
             case ResourceType.Coins:
-                Coins += amount;
+                Coins += (int)amount;
                 break;
             case ResourceType.Garlic:
                 Garlic += amount;
