@@ -1,4 +1,5 @@
 using TMPro;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,6 +29,8 @@ public class ResourceManager : MonoBehaviour
 
 
 
+    public bool CoinBoost { get; private set; }
+    public float BoostTime { get; private set; }
 
     //Getters and setters for the resources
     public float Coins { 
@@ -94,7 +97,46 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void BoostCoinIncome(float time)
+    {
+        //Assume that we won't trigger another boost before one ends.
+        StartCoroutine(BoostCountdownCoroutine(time));
+    }
+    IEnumerator BoostCountdownCoroutine(float time)
+    {
+        CoinBoost = true;
+        BoostTime = time;
+        while (BoostTime > 0)
+        {
+            yield return null;
+            BoostTime -= Time.deltaTime;
+        }
+        CoinBoost = false;
+    }
+
+    public float CurrentResourceSum => WeightedSum(Instance.Coins, 0, 0, 0, 0);
+    public float FulfillProgress(Chuckable chuckable)
+    {
+        float currentsum = WeightedSum(
+            Mathf.Min(chuckable.GoldReq, Coins),
+            Mathf.Min(chuckable.WoodReq, Wood),
+            Mathf.Min(chuckable.WaterReq, Water),
+            Mathf.Min(chuckable.StoneReq, Stone),
+            Mathf.Min(chuckable.GoopReq, Goop)
+            );
+        float totalReq = WeightedSum(chuckable);
+        return currentsum / totalReq;
+    }
+    public static float WeightedSum(Chuckable chuckable)
+    {
+        return WeightedSum(chuckable.GoldReq, chuckable.WoodReq, chuckable.WaterReq, chuckable.StoneReq, chuckable.GoopReq);
+    }
+    public static float WeightedSum(int coins, int wood, int water, int stone, int goop)
+    {
+        return coins + wood + water + stone + goop * 10;
     }
 
     public void AddResource(ResourceType resourceType, float amount)
