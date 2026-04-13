@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2628924341634619045}
   - component: {fileID: -1841117522887798517}
   - component: {fileID: -5122691989756494266}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chuck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

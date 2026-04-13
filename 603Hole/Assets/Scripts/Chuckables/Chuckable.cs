@@ -13,7 +13,7 @@ public class Chuckable : ScriptableObject
     public int StoneReq;
     public int GoopReq;
 
-    public bool ValidateBuyable(int gold, int wood, int water, int stone, int goop)
+    public bool ValidateBuyable(float gold, float wood, float water, float stone, float goop)
     {
         return gold >= GoldReq && wood >= WoodReq && water >= WaterReq && stone >= StoneReq && goop >= GoopReq;
     }
