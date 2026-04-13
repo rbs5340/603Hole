@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class IconDisplayUI : MonoBehaviour
 {
     public Sprite iconSprite;
-    [SerializeField] private TextMeshProUGUI numText;
+    //[SerializeField] private TextMeshProUGUI numText;
     [SerializeField] private Image iconPrefab;
     [SerializeField] private RectTransform iconContainer;
 
@@ -34,13 +34,13 @@ public class IconDisplayUI : MonoBehaviour
 
         iconPrefab.gameObject.SetActive(false);
         ClearIcon();
-        SetDisplayNumer(0);
+        //SetDisplayNumer(0);
     }
 
-    public void SetDisplayNumer(int number)
+    /*public void SetDisplayNumer(int number)
     {
         numText.text = number.ToString();
-    }
+    }*/
 
     public void SetIconCount(int count)
     {
