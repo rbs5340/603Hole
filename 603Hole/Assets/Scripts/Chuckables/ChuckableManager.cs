@@ -11,7 +11,7 @@ public class ChuckableManager : MonoSingleton<ChuckableManager>
     public List<Chuckable> Chuckables => chuckables.ToList();
 
     //This should redirect to actual resource manager
-    int currentGold => ResourceManager.Instance.Coins;
+    int currentGold => (int)ResourceManager.Instance.Coins;
 
     protected override void Awake()
     {
