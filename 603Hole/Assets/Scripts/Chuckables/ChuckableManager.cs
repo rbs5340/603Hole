@@ -13,11 +13,11 @@ public class ChuckableManager : MonoSingleton<ChuckableManager>
     public List<Chuckable> Chuckables => chuckables.ToList();
 
     //This should redirect to actual resource manager
-    int currentGold => ResourceManager.Instance.Coins;
-    int currentWood => ResourceManager.Instance.Wood;
-    int currentWater => ResourceManager.Instance.Water;
-    int currentStone => ResourceManager.Instance.Stone;
-    int currentGoop => ResourceManager.Instance.Goop;
+    float currentGold => ResourceManager.Instance.Coins;
+    float currentGarlic => ResourceManager.Instance.Garlic;
+    float currentCandy => ResourceManager.Instance.Candy;
+    float currentBikes => ResourceManager.Instance.Bikes;
+    float currentWaluigium => ResourceManager.Instance.Waluigium;
 
     protected override void Awake()
     {
@@ -36,7 +36,7 @@ public class ChuckableManager : MonoSingleton<ChuckableManager>
     {
         //TODO: validate requirements.
         progress = ResourceManager.Instance.FulfillProgress(chuckable);
-        return chuckable.ValidateBuyable(currentGold, currentWood, currentWater, currentStone, currentGoop);
+        return chuckable.ValidateBuyable(currentGold, currentGarlic, currentCandy, currentBikes, currentWaluigium);
     }
 
     /// <summary>

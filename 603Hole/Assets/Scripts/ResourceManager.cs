@@ -122,10 +122,10 @@ public class ResourceManager : MonoBehaviour
     {
         float currentsum = WeightedSum(
             Mathf.Min(chuckable.GoldReq, Coins),
-            Mathf.Min(chuckable.WoodReq, Wood),
-            Mathf.Min(chuckable.WaterReq, Water),
-            Mathf.Min(chuckable.StoneReq, Stone),
-            Mathf.Min(chuckable.GoopReq, Goop)
+            Mathf.Min(chuckable.WoodReq, Garlic),
+            Mathf.Min(chuckable.WaterReq, Candy),
+            Mathf.Min(chuckable.StoneReq, Bikes),
+            Mathf.Min(chuckable.GoopReq, Waluigium)
             );
         float totalReq = WeightedSum(chuckable);
         return currentsum / totalReq;
@@ -134,7 +134,7 @@ public class ResourceManager : MonoBehaviour
     {
         return WeightedSum(chuckable.GoldReq, chuckable.WoodReq, chuckable.WaterReq, chuckable.StoneReq, chuckable.GoopReq);
     }
-    public static float WeightedSum(int coins, int wood, int water, int stone, int goop)
+    public static float WeightedSum(float coins, float wood, float water, float stone, float goop)
     {
         return coins + wood + water + stone + goop * 10;
     }

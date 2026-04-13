@@ -57,12 +57,6 @@ public class Hole : MonoBehaviour
         
     }
 
-    public void FillHole(float fillWeight)
-    {
-        amountFilled += fillWeight;
-        FillProgressUI.SetProgress(amountFilled);
-    }
-
     private void OnMouseDown()
     {
         FillHole(coinsToSpawn);
