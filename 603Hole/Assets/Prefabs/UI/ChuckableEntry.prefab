@@ -1402,7 +1402,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1628963984155779552, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_text
-      value: Stone
+      value: Bikes
       objectReference: {fileID: 0}
     - target: {fileID: 6399767514313365744, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_Pivot.x
@@ -1519,7 +1519,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1628963984155779552, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_text
-      value: Goop
+      value: Waluigium
+      objectReference: {fileID: 0}
+    - target: {fileID: 1628963984155779552, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
+      propertyPath: m_fontSize
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1628963984155779552, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754426436161895059, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754426436161895059, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 76.5
       objectReference: {fileID: 0}
     - target: {fileID: 6399767514313365744, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_Pivot.x
@@ -1601,9 +1617,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6424036873617193927, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
+      propertyPath: m_text
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 7997273315536478307, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_Name
       value: ResourceEntryGoop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104774486685530751, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 52.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104774486685530751, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 21.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1636,7 +1664,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1628963984155779552, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_text
-      value: Water
+      value: Candy
       objectReference: {fileID: 0}
     - target: {fileID: 6399767514313365744, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_Pivot.x
@@ -1753,9 +1781,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1628963984155779552, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_text
-      value: 'Wood
-
-'
+      value: Garlic
       objectReference: {fileID: 0}
     - target: {fileID: 6399767514313365744, guid: 8e00e35fd00197d4f9809665ed8d6038, type: 3}
       propertyPath: m_Pivot.x
