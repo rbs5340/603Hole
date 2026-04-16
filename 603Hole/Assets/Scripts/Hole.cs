@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,13 +14,34 @@ public class Hole : MonoBehaviour
 
     [SerializeField] private float amountFilled = 0;
 
+    private List<Coin> coins;
+
+    public List<Coin> Coins { get { return coins; } set { coins = value; } }
+
     public int CoinsToSpawn { get { return coinsToSpawn; } set { coinsToSpawn = value; } }
 
     private int width;
     private int height;
+
+    private static Hole _instance;
+
+    public static Hole Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        coins = new List<Coin>();
         width = (int)gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
         height = (int)gameObject.GetComponent<SpriteRenderer>().bounds.size.y;
     }
@@ -37,12 +59,7 @@ public class Hole : MonoBehaviour
 
     private void OnMouseDown()
     {
-        for(int i = 0; i < coinsToSpawn; i++)
-        {
-            SpawnCoin();
-            amountFilled += coinsToSpawn;
-            FillProgressUI.SetProgress(amountFilled);
-        }
+        FillHole(coinsToSpawn);
     }
 
     public void SpawnCoin()
@@ -51,8 +68,17 @@ public class Hole : MonoBehaviour
         Vector3 pos = new Vector3(Mathf.Cos(theta) * (width + horizDistFromEdge) / 2, Mathf.Sin(theta) * (height + vertDistFromEdge) / 2, 100);
         pos += transform.position;
         GameObject newCoin = Instantiate(coinPrefab, pos, Quaternion.identity);
+        coins.Add(newCoin.GetComponent<Coin>());
+    }
 
-        Debug.Log(newCoin.transform.position);
+    public void FillHole(float amount)
+    {
+        amountFilled += amount;
+        FillProgressUI.SetProgress(amountFilled);
+        for(int i = 0; i < amount; i++)
+        {
+            SpawnCoin();
+        }
     }
 
 }

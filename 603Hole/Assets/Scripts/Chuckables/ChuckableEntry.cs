@@ -9,7 +9,8 @@ public class ChuckableEntry : MonoBehaviour
     Chuckable _chuckable;
     public Chuckable Chuckable { get => _chuckable; set { SetChuckable(value); } }
 
-    [SerializeField] private Button button;
+    [SerializeField] public Button buyButton;
+    [SerializeField] public Button getByAdButton;
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI HFUText;
@@ -36,8 +37,21 @@ public class ChuckableEntry : MonoBehaviour
         GoopReqText.transform.parent.gameObject.SetActive(chuckable.GoopReq > 0);
     }
 
-    public void BindCallback(Action<ChuckableEntry> callback)
+    public void BindCallback(Action<ChuckableEntry> callback, Action<ChuckableEntry> callbackAd)
     {
-        button.onClick.AddListener(new UnityAction(() => callback.Invoke(this)));
+        buyButton.onClick.AddListener(new UnityAction(() => callback.Invoke(this)));
+        getByAdButton.onClick.AddListener(new UnityAction(() => callbackAd.Invoke(this)));
     }
+    public void SetButtonState(bool buyable, bool ADable)
+    {
+        buyButton.interactable = buyable;
+        buyButton.GetComponentInChildren<TextMeshProUGUI>().text = buyable ? "BUY" : "TOO POOR";
+        getByAdButton.gameObject.SetActive(ADable);
+    }
+
+    public Vector2 GetIconPosition()
+    {
+        return icon.transform.position;
+    }
+
 }

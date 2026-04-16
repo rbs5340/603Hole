@@ -18,10 +18,10 @@ public class FillProgressUI : MonoSingleton<FillProgressUI>
             Instance.fillBar.fillAmount = filledWeight / Instance.maxHFU;
             Instance.fillText.text = $"Filled {filledWeight} / {Instance.maxHFU}";
 
-            if(Instance.fillBar.fillAmount >= 1)
-            {
-                Instance.achievement.SetActive(true);
-            }
+            //if(Instance.fillBar.fillAmount >= 1)
+            //{
+            //    Instance.achievement.SetActive(true);
+            //}
         }
     }
 }
