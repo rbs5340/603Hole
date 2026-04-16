@@ -1173,7 +1173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1577871416773069386, guid: f319007db06968041bad273e8f90461f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2784426093255991145, guid: f319007db06968041bad273e8f90461f, type: 3}
       propertyPath: m_Pivot.x
@@ -1201,11 +1201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2784426093255991145, guid: f319007db06968041bad273e8f90461f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2784426093255991145, guid: f319007db06968041bad273e8f90461f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 19.999996
       objectReference: {fileID: 0}
     - target: {fileID: 2784426093255991145, guid: f319007db06968041bad273e8f90461f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1253,6 +1253,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2784426093255991145, guid: f319007db06968041bad273e8f90461f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787423254849773352, guid: f319007db06968041bad273e8f90461f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6214125780030459290, guid: f319007db06968041bad273e8f90461f, type: 3}
@@ -9940,6 +9944,18 @@ PrefabInstance:
       propertyPath: contentHolder
       value: 
       objectReference: {fileID: 17609633}
+    - target: {fileID: 7059161183075417645, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
+      propertyPath: getBonusWhenClosePanel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059161183075417645, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
+      propertyPath: availableClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059161183075417645, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
+      propertyPath: 'availableClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 32900000, guid: d6fb467ef78f73c4cade282aa701e78c, type: 3}
     - target: {fileID: 7927278316879548357, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
       propertyPath: hole
       value: 
