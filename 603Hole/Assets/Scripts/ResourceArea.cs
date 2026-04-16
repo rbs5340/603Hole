@@ -19,6 +19,8 @@ public class ResourceArea : MonoBehaviour
 
     [SerializeField] private float workerWages;
 
+    [SerializeField] private TMP_Text workerNumDisplay;
+
     private int numWorkers;
 
     private float numResources;
@@ -26,6 +28,8 @@ public class ResourceArea : MonoBehaviour
     private void Start()
     {
         numResources = maxResources;
+        workerNumDisplay.text = numWorkers.ToString();
+
     }
 
     // Update is called once per frame
@@ -74,6 +78,7 @@ public class ResourceArea : MonoBehaviour
     {
         numWorkers++;
         gameObject.GetComponent<IconDisplayUI>().SetIconCount(numWorkers);
+        workerNumDisplay.text = numWorkers.ToString();
     }
 
     public void RemoveWorker()
@@ -85,5 +90,8 @@ public class ResourceArea : MonoBehaviour
         }
 
         gameObject.GetComponent<IconDisplayUI>().SetIconCount(numWorkers);
+
+        workerNumDisplay.text = numWorkers.ToString();
+
     }
 }
