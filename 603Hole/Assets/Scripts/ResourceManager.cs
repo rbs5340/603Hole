@@ -7,8 +7,8 @@ public enum ResourceType
 {
     Coins,
     Garlic,
-    Bikes,
     Candy,
+    Bikes,
     Waluigium,
     None
 }
