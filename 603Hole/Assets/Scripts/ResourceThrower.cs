@@ -95,7 +95,6 @@ public class ResourceThrower : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collided :)");
         if(collision.gameObject.GetComponent<ResourceArea>() != null && carriedResource == ResourceType.None && collision.gameObject.GetComponent<ResourceArea>().ResourceType == targetResource)
         {
             carriedResource = collision.gameObject.GetComponent<ResourceArea>().ResourceType;
