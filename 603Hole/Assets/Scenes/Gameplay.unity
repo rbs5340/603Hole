@@ -7049,7 +7049,7 @@ PrefabInstance:
     - target: {fileID: 1751676504416745087, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7831262199261175567, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
+      objectReference: {fileID: 932756287847500860}
     - target: {fileID: 1751676504416745087, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AddOneWorker
@@ -7077,7 +7077,7 @@ PrefabInstance:
     - target: {fileID: 1895180124742912982, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7831262199261175567, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
+      objectReference: {fileID: 932756287847500860}
     - target: {fileID: 1895180124742912982, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -7173,7 +7173,7 @@ PrefabInstance:
     - target: {fileID: 6210965769495826674, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7831262199261175567, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
+      objectReference: {fileID: 932756287847500860}
     - target: {fileID: 6210965769495826674, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -7217,7 +7217,7 @@ PrefabInstance:
     - target: {fileID: 6882207380355062439, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7831262199261175567, guid: 5331e7217b81e454490dc23d059884c0, type: 3}
+      objectReference: {fileID: 932756287847500860}
     - target: {fileID: 6882207380355062439, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
