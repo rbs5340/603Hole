@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class WorkerManager : MonoBehaviour
@@ -14,6 +15,10 @@ public class WorkerManager : MonoBehaviour
     private static WorkerManager _instance;
 
     public static WorkerManager Instance { get { return _instance; } }
+
+    private float totalCostOfLabor;
+
+    [SerializeField] private TMP_Text laborCostDisplay;
 
     private void Awake()
     {
@@ -36,7 +41,7 @@ public class WorkerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        laborCostDisplay.text = ((int)GetTotalCostOfLabor()).ToString();
     }
 
     public void AddOneWorker(int resourceType)
@@ -128,5 +133,16 @@ public class WorkerManager : MonoBehaviour
             }
         }
         
+    }
+
+    private float GetTotalCostOfLabor()
+    {
+        float total = 0;
+        foreach (ResourceArea rArea in resourceArea)
+        {
+            total += rArea.LaborCosts();
+        }
+
+        return total;
     }
 }

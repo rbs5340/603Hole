@@ -94,4 +94,9 @@ public class ResourceArea : MonoBehaviour
         workerNumDisplay.text = numWorkers.ToString();
 
     }
+
+    public float LaborCosts()
+    {
+        return numWorkers * workerWages;
+    }
 }
