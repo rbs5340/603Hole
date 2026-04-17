@@ -70,10 +70,10 @@ public class WorkerManager : MonoBehaviour
                     resourceArea[0].AddWorker();
                     break;
                 case (int)ResourceType.Bikes:
-                    resourceArea[1].AddWorker();
+                    resourceArea[2].AddWorker();
                     break;
                 case (int)ResourceType.Candy:
-                    resourceArea[2].AddWorker();
+                    resourceArea[1].AddWorker();
                     break;
                 case (int)ResourceType.Waluigium:
                     resourceArea[3].AddWorker();
@@ -117,10 +117,10 @@ public class WorkerManager : MonoBehaviour
                     resourceArea[0].RemoveWorker();
                     break;
                 case (int)ResourceType.Bikes:
-                    resourceArea[1].RemoveWorker();
+                    resourceArea[2].RemoveWorker();
                     break;
                 case (int)ResourceType.Candy:
-                    resourceArea[2].RemoveWorker();
+                    resourceArea[1].RemoveWorker();
                     break;
                 case (int)ResourceType.Waluigium:
                     resourceArea[3].RemoveWorker();

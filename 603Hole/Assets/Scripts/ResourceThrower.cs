@@ -14,7 +14,7 @@ public class ResourceThrower : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        idle = true;
     }
 
     // Update is called once per frame
@@ -62,14 +62,14 @@ public class ResourceThrower : MonoBehaviour
 
     }
 
-    Vector3 GetHighestResourceArea()
+    private Vector3 GetHighestResourceArea()
     {
         float greatestAmount = 0;
         ResourceType highest = ResourceType.None;
         
-        for ( int i = 0; i < 4; i++)
+        for ( int i = 1; i < 5; i++)
         {
-            ResourceType resourceType = (ResourceType)i;
+            ResourceType resourceType = (ResourceType)(i);
             float amount = ResourceManager.Instance.GetResourceAmount(resourceType);
             if (amount > greatestAmount && amount > 1)
             {
