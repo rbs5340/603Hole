@@ -9,7 +9,7 @@ public class Hole : MonoBehaviour
     [SerializeField] private int coinsToSpawn = 1; // Number of coins to spawn when the hole is clicked
 
     [SerializeField] private float horizDistFromEdge = 2;
-    
+
     [SerializeField] private float vertDistFromEdge = 2;
 
     [SerializeField] private float amountFilled = 0;
@@ -19,6 +19,7 @@ public class Hole : MonoBehaviour
     public List<Coin> Coins { get { return coins; } set { coins = value; } }
 
     public int CoinsToSpawn { get { return coinsToSpawn; } set { coinsToSpawn = value; } }
+    public float FillPerMushroom { get; set; } = 1;
 
     private int width;
     private int height;
@@ -48,18 +49,18 @@ public class Hole : MonoBehaviour
 
     private void OnEnable()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseDown()
     {
-        FillHole(coinsToSpawn);
+        FillHole(coinsToSpawn * FillPerMushroom);
     }
 
     public void SpawnCoin()
@@ -75,7 +76,7 @@ public class Hole : MonoBehaviour
     {
         amountFilled += amount;
         FillProgressUI.SetProgress(amountFilled);
-        for(int i = 0; i < amount; i++)
+        for (int i = 0; i < amount; i++)
         {
             SpawnCoin();
         }

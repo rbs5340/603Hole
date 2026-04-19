@@ -29,7 +29,8 @@ public class ResourceManager : MonoBehaviour
 
 
 
-    public bool CoinBoost { get; private set; }
+    public bool CoinBoost { get; private set; } = false;
+    public float CoinIncomeMultiplier { get; set; } = 1;
     public float BoostTime { get; private set; }
 
     //Getters and setters for the resources

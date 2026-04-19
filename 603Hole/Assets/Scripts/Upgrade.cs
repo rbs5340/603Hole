@@ -11,6 +11,6 @@ public class Upgrade : ScriptableObject
     public float BasePrice;
     public float PriceIncreasePerUpgrade;
     public float EffectPerUpgrade;
-    public int Cost(int level) => Mathf.CeilToInt(BasePrice * Mathf.Pow(PriceIncreasePerUpgrade, level));
+    public float Cost(int level) => BasePrice * Mathf.Pow(PriceIncreasePerUpgrade, level);
     public float Effect(int level) => Mathf.Pow(EffectPerUpgrade, level);
 }
