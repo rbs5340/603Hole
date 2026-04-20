@@ -130,6 +130,7 @@ MonoBehaviour:
   countdown: {fileID: 0}
   contentHolder: {fileID: 0}
   minWatchLength: 15
+  getBonusWhenClosePanel: 1
 --- !u!114 &7831262199261175567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,4 +151,4 @@ MonoBehaviour:
   nabbitPrefab: {fileID: 5863659719612360251, guid: a64ac0ecb8a32d34db61f0ccaf20a4cf, type: 3}
   chuckPrefab: {fileID: 1445148124369609222, guid: 65d2c2228d30c9841828f41b1e1bfcf4, type: 3}
   workerCosts: 050000000500000005000000050000000f00000005000000
-  getBonusWhenClosePanel: 1
+  laborCostDisplay: {fileID: 0}
