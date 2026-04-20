@@ -29,7 +29,7 @@ public class IconDisplayUI : MonoBehaviour
             actionOnGet: icon => icon.gameObject.SetActive(true),
             actionOnRelease: icon => icon.gameObject.SetActive(false),
             actionOnDestroy: icon => Destroy(icon.gameObject),
-            defaultCapacity: 256
+            defaultCapacity: 32
         );
 
         iconPrefab.gameObject.SetActive(false);
