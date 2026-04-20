@@ -12,6 +12,7 @@ public class PauseButton : MonoBehaviour
     {
         var button = GetComponent<Button>();
         button.onClick.AddListener(SetPauseState);
+        Time.timeScale = 1;
     }
 
 

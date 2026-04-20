@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94772905dacc764e87c7d56682592cf, type: 3}
+  m_Name: Thwomp
+  m_EditorClassIdentifier: 
+  Name: Thwomp
+  Icon: {fileID: -3082694299886218066, guid: da987584332a9724498768dbde4944f1, type: 3}
+  HFU: 10000
+  GoldReq: 20000
+  WoodReq: 2000
+  WaterReq: 6000
+  StoneReq: 0
+  GoopReq: 200
