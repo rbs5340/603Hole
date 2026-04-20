@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,21 +8,51 @@ using UnityEngine.Video;
 
 public class AdPlayer : MonoSingleton<AdPlayer>
 {
-    [SerializeField] private VideoClip clip;
+    [SerializeField] private List<VideoClip> availableClips;
     [SerializeField] private VideoPlayer player;
     [SerializeField] private Button closeButton;
     [SerializeField] private TextMeshProUGUI countdown;
     [SerializeField] private GameObject contentHolder;
 
     [SerializeField] private float minWatchLength = 15;
+    [Tooltip("Not modifiable during gameplay")]
+    [SerializeField] private bool getBonusWhenClosePanel;
 
     private UnityEvent successCallback = new();
+    private VideoClip[] shuffledClips;
+    private int currentClipIndex = 0;
+    private int ClipCount => availableClips.Count;
 
     private void Start()
     {
-        player.clip = clip;
+        List<VideoClip> copiedList = new();
+        List<VideoClip> shuffledList = new();
+        copiedList.AddRange(availableClips);
+        int n = availableClips.Count;
+        for (int i = 0; i < n; i++)
+        {
+            int index = Random.Range(0, copiedList.Count);
+            shuffledList.Add(copiedList[index]);
+            copiedList.RemoveAt(index);
+        }
+        shuffledClips = shuffledList.ToArray();
+
         closeButton.onClick.AddListener(StopAndClose);
+        if (getBonusWhenClosePanel) closeButton.onClick.AddListener(InvokeSuccessCallback);
         StopAndClose();
+    }
+
+    private VideoClip GetRandomClip()
+    {
+        if (currentClipIndex >= ClipCount)
+        {
+            return shuffledClips[Random.Range(0, ClipCount)];
+        }
+        else
+        {
+            currentClipIndex++;
+            return shuffledClips[currentClipIndex - 1];
+        }
     }
 
     /// <summary>
@@ -36,6 +67,8 @@ public class AdPlayer : MonoSingleton<AdPlayer>
     [ContextMenu("Play Ad")]
     public void OpenAndPlay()
     {
+        if (contentHolder.activeSelf) return;
+        player.clip = GetRandomClip();
         contentHolder.SetActive(true);
         player.Play();
         closeButton.gameObject.SetActive(false);
@@ -59,10 +92,17 @@ public class AdPlayer : MonoSingleton<AdPlayer>
         {
             countdown.text = $"{Mathf.Ceil(timer):F0}";
             yield return null;
-            timer -= Time.deltaTime;
+            timer -= Time.unscaledDeltaTime;//No idea why the game pauses but hope it works
         }
         closeButton.gameObject.SetActive(true);
         countdown.gameObject.SetActive(false);
+
+
+        if (!getBonusWhenClosePanel) InvokeSuccessCallback();
+    }
+
+    private void InvokeSuccessCallback()
+    {
         successCallback?.Invoke();
         successCallback.RemoveAllListeners();
     }

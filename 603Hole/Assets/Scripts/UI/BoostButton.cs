@@ -2,17 +2,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
 public class BoostButton : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
-    Button button;
+    [SerializeField] Button button;
     string originalText;
 
     private void Awake()
     {
-        button = GetComponent<Button>();
         originalText = text.text;
+    }
+
+    private void Start()
+    {
+        button.onClick.AddListener(TransactionManager.Instance.OpenPanel);
     }
 
     private void Update()

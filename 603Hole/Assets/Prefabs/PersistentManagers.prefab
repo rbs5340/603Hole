@@ -62,11 +62,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
-  wood: 0
-  water: 0
-  stone: 0
-  goop: 0
-  iconDisplay: {fileID: 0}
+  garlic: 0
+  candy: 0
+  bikes: 0
+  waluigium: 0
+  coinDisplay: {fileID: 0}
+  garlicDisplay: {fileID: 0}
+  candyDisplay: {fileID: 0}
+  bikesDisplay: {fileID: 0}
+  waluigiumDisplay: {fileID: 0}
 --- !u!114 &7927278316879548357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
+  transactionPanel: {fileID: 0}
+  boostIncomeTime: 300
 --- !u!114 &7059161183075417645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,9 +113,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  clip: {fileID: 32900000, guid: afd33f6c261eb1447a960cb49ce16c0d, type: 3}
+  availableClips:
+  - {fileID: 32900000, guid: d6fb467ef78f73c4cade282aa701e78c, type: 3}
+  - {fileID: 32900000, guid: 7c790a7d40fc6dd47a579180fb9b06c9, type: 3}
+  - {fileID: 32900000, guid: fbd5376ab67589a4b9952d1ed866e7de, type: 3}
+  - {fileID: 32900000, guid: 663a8565365e9424784a86a438b4ccb7, type: 3}
+  - {fileID: 32900000, guid: 94936c8ac925bb54ebbc108a041ff246, type: 3}
+  - {fileID: 32900000, guid: 7d7706e09adc5fb418d3ca691a1dc2ad, type: 3}
+  - {fileID: 32900000, guid: 98801a77c10aae94da88dda8fda202d7, type: 3}
+  - {fileID: 32900000, guid: 7d7706e09adc5fb418d3ca691a1dc2ad, type: 3}
+  - {fileID: 32900000, guid: bf554ed7ac3a849469ccd7ec657efcde, type: 3}
+  - {fileID: 32900000, guid: efa059c7d64c31a48b09b33b3acbaa5f, type: 3}
   player: {fileID: 0}
   closeButton: {fileID: 0}
   countdown: {fileID: 0}
   contentHolder: {fileID: 0}
   minWatchLength: 15
+  getBonusWhenClosePanel: 1

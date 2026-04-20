@@ -94,7 +94,8 @@ public class ChuckableListUI : MonoBehaviour
         var endWorldPos = new Vector2(endWorldPosX, endWorldPosY);
 
         IconProjectileHolder.Instance.Create(
-            chuckableEntry.GetIconPosition(),
+            //chuckableEntry.GetIconPosition(),
+            Camera.main.WorldToScreenPoint(chuckableEntry.GetIconPosition()),
             Camera.main.WorldToScreenPoint(endWorldPos), // world space to screen space
             chuckableEntry.Chuckable.Icon,
             () => ChuckableManager.Instance.OnChuck(chuckableEntry.Chuckable)

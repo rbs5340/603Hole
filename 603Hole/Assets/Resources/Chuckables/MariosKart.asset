@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94772905dacc764e87c7d56682592cf, type: 3}
+  m_Name: MariosKart
+  m_EditorClassIdentifier: 
+  Name: Mario's Kart
+  Icon: {fileID: 4087307663033670200, guid: fd4d9347b979545488e1ec176898a642, type: 3}
+  HFU: 2500
+  GoldReq: 5000
+  WoodReq: 250
+  WaterReq: 1500
+  StoneReq: 250
+  GoopReq: 50
