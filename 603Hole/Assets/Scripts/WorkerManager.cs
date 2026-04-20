@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class WorkerManager : MonoBehaviour
@@ -14,6 +15,10 @@ public class WorkerManager : MonoBehaviour
     private static WorkerManager _instance;
 
     public static WorkerManager Instance { get { return _instance; } }
+
+    private float totalCostOfLabor;
+
+    [SerializeField] private TMP_Text laborCostDisplay;
 
     private void Awake()
     {
@@ -36,69 +41,108 @@ public class WorkerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        laborCostDisplay.text = ((int)GetTotalCostOfLabor()).ToString();
+    }
+
+    public void AddOneWorker(int resourceType)
+    {
+        AddWorker(resourceType, 1);
+    }
+
+    public void AddFiftyWorker(int resourceType)
+    {
+        AddWorker(resourceType, 50);
+    }
+
+    public void AddWorker(int resourceType, int amount)
+    {
+        for(int i  = 0; i < amount; i++)
+        {
+            if (ResourceManager.Instance.Coins < workerCosts[resourceType])
+                return;
+
+            ResourceManager.Instance.Coins -= workerCosts[resourceType];
+            //ResourceType resourceType = ResourceType.None;
+            switch (resourceType)
+            {
+                case (int)ResourceType.Coins:
+                    Instantiate(nabbitPrefab, gameObject.transform);
+                    break;
+                case (int)ResourceType.None:
+                    Instantiate(chuckPrefab);
+                    break;
+                case (int)ResourceType.Garlic:
+                    resourceArea[0].AddWorker();
+                    break;
+                case (int)ResourceType.Bikes:
+                    resourceArea[2].AddWorker();
+                    break;
+                case (int)ResourceType.Candy:
+                    resourceArea[1].AddWorker();
+                    break;
+                case (int)ResourceType.Waluigium:
+                    resourceArea[3].AddWorker();
+                    break;
+            }
+        }
         
     }
 
-    public void AddWorker(int resourceType)
+    public void RemoveOneWorker(int resourceType)
     {
-        if (ResourceManager.Instance.Coins < workerCosts[resourceType])
-            return;
-
-        ResourceManager.Instance.Coins -= workerCosts[resourceType];
-        //ResourceType resourceType = ResourceType.None;
-        switch (resourceType)
-        {
-            case (int)ResourceType.Coins:
-                Instantiate(nabbitPrefab, gameObject.transform);
-                break;
-            case (int)ResourceType.None:
-                Instantiate(chuckPrefab);
-                break;
-            case (int)ResourceType.Garlic:
-                resourceArea[0].AddWorker();
-                break;
-            case (int)ResourceType.Bikes:
-                resourceArea[1].AddWorker();
-                break;
-            case (int)ResourceType.Candy:
-                resourceArea[2].AddWorker();
-                break;
-            case (int)ResourceType.Waluigium:
-                resourceArea[3].AddWorker();
-                break;
-        }
+        RemoveWorker(resourceType, 1);
     }
 
-    public void RemoveWorker(int resourceType)
+    public void RemoveFiftyWorker(int resourceType)
     {
-        switch (resourceType)
+        RemoveWorker(resourceType, 50);
+    }
+
+    public void RemoveWorker(int resourceType, int amount)
+    {
+        for(int i = 0; i < amount; i++)
         {
-            case (int)ResourceType.Coins:
-                GameObject sacrifice = FindAnyObjectByType<CoinCollector>().gameObject;
-                if (sacrifice)
-                {
-                    Destroy(sacrifice);
-                }
-                break;
-            case (int)ResourceType.None:
-                GameObject sacrificeAgain = FindAnyObjectByType<ResourceThrower>().gameObject;
-                if (sacrificeAgain)
-                {
-                    Destroy(sacrificeAgain);
-                }
-                break;
-            case (int)ResourceType.Garlic:
-                resourceArea[0].RemoveWorker();
-                break;
-            case (int)ResourceType.Bikes:
-                resourceArea[1].RemoveWorker();
-                break;
-            case (int)ResourceType.Candy:
-                resourceArea[2].RemoveWorker();
-                break;
-            case (int)ResourceType.Waluigium:
-                resourceArea[3].RemoveWorker();
-                break;
+            switch (resourceType)
+            {
+                case (int)ResourceType.Coins:
+                    GameObject sacrifice = FindAnyObjectByType<CoinCollector>().gameObject;
+                    if (sacrifice)
+                    {
+                        Destroy(sacrifice);
+                    }
+                    break;
+                case (int)ResourceType.None:
+                    GameObject sacrificeAgain = FindAnyObjectByType<ResourceThrower>().gameObject;
+                    if (sacrificeAgain)
+                    {
+                        Destroy(sacrificeAgain);
+                    }
+                    break;
+                case (int)ResourceType.Garlic:
+                    resourceArea[0].RemoveWorker();
+                    break;
+                case (int)ResourceType.Bikes:
+                    resourceArea[2].RemoveWorker();
+                    break;
+                case (int)ResourceType.Candy:
+                    resourceArea[1].RemoveWorker();
+                    break;
+                case (int)ResourceType.Waluigium:
+                    resourceArea[3].RemoveWorker();
+                    break;
+            }
         }
+        
+    }
+
+    private float GetTotalCostOfLabor()
+    {
+        float total = 0;
+        foreach (ResourceArea rArea in resourceArea)
+        {
+            total += rArea.LaborCosts();
+        }
+
+        return total;
     }
 }

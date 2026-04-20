@@ -14,11 +14,11 @@ public class ResourceThrower : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        idle = true;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, targetPos, speed * Time.deltaTime);
         if (idle)
@@ -62,14 +62,14 @@ public class ResourceThrower : MonoBehaviour
 
     }
 
-    Vector3 GetHighestResourceArea()
+    private Vector3 GetHighestResourceArea()
     {
         float greatestAmount = 0;
         ResourceType highest = ResourceType.None;
         
-        for ( int i = 0; i < 4; i++)
+        for ( int i = 1; i < 5; i++)
         {
-            ResourceType resourceType = (ResourceType)i;
+            ResourceType resourceType = (ResourceType)(i);
             float amount = ResourceManager.Instance.GetResourceAmount(resourceType);
             if (amount > greatestAmount && amount > 1)
             {
@@ -95,7 +95,6 @@ public class ResourceThrower : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collided :)");
         if(collision.gameObject.GetComponent<ResourceArea>() != null && carriedResource == ResourceType.None && collision.gameObject.GetComponent<ResourceArea>().ResourceType == targetResource)
         {
             carriedResource = collision.gameObject.GetComponent<ResourceArea>().ResourceType;

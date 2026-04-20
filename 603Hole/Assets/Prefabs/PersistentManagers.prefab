@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7927278316879548357}
   - component: {fileID: 9173674037396844304}
   - component: {fileID: 7059161183075417645}
+  - component: {fileID: 7831262199261175567}
   m_Layer: 0
   m_Name: PersistentManagers
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d9d9876fb4bf64d88ac1dd508a8c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
+  dontDestroyOnLoad: 0
 --- !u!114 &4383356414840504678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,3 +131,24 @@ MonoBehaviour:
   contentHolder: {fileID: 0}
   minWatchLength: 15
   getBonusWhenClosePanel: 1
+--- !u!114 &7831262199261175567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683279364982660979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d03e20bc10a99a42835a305f5e868d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceArea:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  nabbitPrefab: {fileID: 5863659719612360251, guid: a64ac0ecb8a32d34db61f0ccaf20a4cf, type: 3}
+  chuckPrefab: {fileID: 1445148124369609222, guid: 65d2c2228d30c9841828f41b1e1bfcf4, type: 3}
+  workerCosts: 050000000500000005000000050000000f00000005000000
+  laborCostDisplay: {fileID: 0}

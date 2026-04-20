@@ -7,8 +7,8 @@ public enum ResourceType
 {
     Coins,
     Garlic,
-    Bikes,
     Candy,
+    Bikes,
     Waluigium,
     None
 }
@@ -39,7 +39,7 @@ public class ResourceManager : MonoBehaviour
         
         set { 
             coins = value;
-            coinDisplay.text = ((int)coins).ToString();
+            coinDisplay.text = NumberFormatter.FormatLargeNumber(coins,0);
         } 
     }
     public float Garlic { get { return garlic; } 

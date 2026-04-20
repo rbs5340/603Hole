@@ -24,7 +24,6 @@ public class Coin : MonoBehaviour
     private void OnMouseDown()
     {
         Hole.Instance.Coins.Remove(this);
-        Debug.Log("Collected Coin!");
         ResourceManager.Instance.Coins += (ResourceManager.Instance.CoinBoost ? 2 : 1) * ResourceManager.Instance.CoinIncomeMultiplier * coinValue;
         Destroy(gameObject);
     }
