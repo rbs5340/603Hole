@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class IconProjectileHolder : MonoSingleton<IconProjectileHolder>
 {
     [SerializeField] private IconProjectile projectilePrefab;
+    [SerializeField] private Sprite coinIcon;
+    [SerializeField] private Sprite garlicIcon;
+    [SerializeField] private Sprite bikeIcon;
+    [SerializeField] private Sprite candyIcon;
+    [SerializeField] private Sprite waluigiumIcon;
     public float projectileSpeed = 500;
     public float maxAngularSpeed = 180;
     RectTransform rectTransform => transform as RectTransform;
@@ -13,6 +18,26 @@ public class IconProjectileHolder : MonoSingleton<IconProjectileHolder>
     private void Start()
     {
         projectilePrefab.gameObject.SetActive(false);
+    }
+
+    public static Sprite GetResourceSprite(ResourceType resourceType)
+    {
+        if (Instance == null || resourceType == ResourceType.None) return null;
+        switch (resourceType)
+        {
+            case ResourceType.Coins:
+                return Instance.coinIcon;
+            case ResourceType.Garlic:
+                return Instance.garlicIcon;
+            case ResourceType.Candy:
+                return Instance.candyIcon;
+            case ResourceType.Bikes:
+                return Instance.bikeIcon;
+            case ResourceType.Waluigium:
+                return Instance.waluigiumIcon;
+            default:
+                return null;
+        }
     }
 
     /// <summary>
@@ -23,7 +48,7 @@ public class IconProjectileHolder : MonoSingleton<IconProjectileHolder>
         IconProjectile newProjectile = Instantiate(projectilePrefab, transform);
         newProjectile.gameObject.SetActive(true);
         newProjectile.Init(startPos, endPos, sprite, callbackAction);
-        newProjectile.speed = float.IsNaN(projectileSpeedOverride)? projectileSpeed: projectileSpeedOverride;
+        newProjectile.speed = float.IsNaN(projectileSpeedOverride) ? projectileSpeed : projectileSpeedOverride;
         float maxAngSpd = float.IsNaN(maxAngularSpeedOverride) ? maxAngularSpeed : maxAngularSpeedOverride;
         newProjectile.angularSpeed = Random.Range(-maxAngSpd, maxAngSpd);
     }
