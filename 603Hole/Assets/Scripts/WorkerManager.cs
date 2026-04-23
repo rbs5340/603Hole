@@ -19,6 +19,10 @@ public class WorkerManager : MonoBehaviour
     private float totalCostOfLabor;
 
     [SerializeField] private TMP_Text laborCostDisplay;
+    [SerializeField] private TMP_Text nabbitNumDisplay;
+    private int nabbitNum = 0;
+    [SerializeField] private TMP_Text chuckNumDisplay;
+    private int chuckNum = 0;
 
     private void Awake()
     {
@@ -35,7 +39,8 @@ public class WorkerManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        nabbitNumDisplay.text = nabbitNum.ToString();
+        chuckNumDisplay.text = chuckNum.ToString();
     }
 
     // Update is called once per frame
@@ -56,7 +61,7 @@ public class WorkerManager : MonoBehaviour
 
     public void AddWorker(int resourceType, int amount)
     {
-        for(int i  = 0; i < amount; i++)
+        for (int i = 0; i < amount; i++)
         {
             if (ResourceManager.Instance.Coins < workerCosts[resourceType])
                 return;
@@ -67,9 +72,13 @@ public class WorkerManager : MonoBehaviour
             {
                 case (int)ResourceType.Coins:
                     Instantiate(nabbitPrefab, gameObject.transform);
+                    nabbitNum++;
+                    nabbitNumDisplay.text = nabbitNum.ToString();
                     break;
                 case (int)ResourceType.None:
                     Instantiate(chuckPrefab);
+                    chuckNum++;
+                    chuckNumDisplay.text = chuckNum.ToString();
                     break;
                 case (int)ResourceType.Garlic:
                     resourceArea[0].AddWorker();
@@ -85,7 +94,7 @@ public class WorkerManager : MonoBehaviour
                     break;
             }
         }
-        
+
     }
 
     public void RemoveOneWorker(int resourceType)
@@ -100,7 +109,7 @@ public class WorkerManager : MonoBehaviour
 
     public void RemoveWorker(int resourceType, int amount)
     {
-        for(int i = 0; i < amount; i++)
+        for (int i = 0; i < amount; i++)
         {
             switch (resourceType)
             {
@@ -110,6 +119,8 @@ public class WorkerManager : MonoBehaviour
                     {
                         Destroy(sacrifice);
                     }
+                    nabbitNum--;
+                    nabbitNumDisplay.text = nabbitNum.ToString();
                     break;
                 case (int)ResourceType.None:
                     GameObject sacrificeAgain = FindAnyObjectByType<ResourceThrower>().gameObject;
@@ -117,6 +128,8 @@ public class WorkerManager : MonoBehaviour
                     {
                         Destroy(sacrificeAgain);
                     }
+                    chuckNum--;
+                    chuckNumDisplay.text = chuckNum.ToString();
                     break;
                 case (int)ResourceType.Garlic:
                     resourceArea[0].RemoveWorker();
@@ -132,7 +145,7 @@ public class WorkerManager : MonoBehaviour
                     break;
             }
         }
-        
+
     }
 
     private float GetTotalCostOfLabor()
