@@ -18,12 +18,13 @@ public class IconProjectileHolder : MonoSingleton<IconProjectileHolder>
     /// <summary>
     /// Input should be in screen space
     /// </summary>
-    public void Create(Vector2 startPos, Vector2 endPos, Sprite sprite, UnityAction callbackAction)
+    public void Create(Vector2 startPos, Vector2 endPos, Sprite sprite, UnityAction callbackAction, float projectileSpeedOverride = float.NaN, float maxAngularSpeedOverride = float.NaN)
     {
         IconProjectile newProjectile = Instantiate(projectilePrefab, transform);
         newProjectile.gameObject.SetActive(true);
         newProjectile.Init(startPos, endPos, sprite, callbackAction);
-        newProjectile.speed = projectileSpeed;
-        newProjectile.angularSpeed = Random.Range(-maxAngularSpeed, maxAngularSpeed);
+        newProjectile.speed = float.IsNaN(projectileSpeedOverride)? projectileSpeed: projectileSpeedOverride;
+        float maxAngSpd = float.IsNaN(maxAngularSpeedOverride) ? maxAngularSpeed : maxAngularSpeedOverride;
+        newProjectile.angularSpeed = Random.Range(-maxAngSpd, maxAngSpd);
     }
 }

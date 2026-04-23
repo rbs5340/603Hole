@@ -51,7 +51,7 @@ public class IconProjectile : MonoBehaviour
 
         image.sprite = sprite;
         callback.AddListener(callbackAction);
-        scaleFactor = Mathf.Abs(endPos.x - startPos.x);
+        scaleFactor = Vector2.Distance(startPos, endPos);
         t = 0;
     }
 }

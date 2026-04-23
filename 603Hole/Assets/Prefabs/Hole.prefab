@@ -139,3 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 3222985976258075776, guid: d312e1c60ebfd85419e4e4589dfb1c1c, type: 3}
+  mushroomSprite: {fileID: 357749872346554099, guid: 832b5ac7efc40a84db6b645d94ff832c, type: 3}
+  coinsToSpawn: 1
+  horizDistFromEdge: 2
+  vertDistFromEdge: 2
+  amountFilled: 0
