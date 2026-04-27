@@ -14,6 +14,8 @@ public class UpgradeManager : MonoBehaviour
     private Dictionary<UpgradeType, int> upgradeLevels = new();
     public IReadOnlyDictionary<UpgradeType, int> UpgradeLevels => upgradeLevels;
 
+    public Dictionary<ResourceType, ResourceArea> resourceAreas = new();
+
     public static UpgradeManager Instance { get { return _instance; } }
 
 
@@ -33,6 +35,12 @@ public class UpgradeManager : MonoBehaviour
         {
             upgrades.Add(upgrade.UpgradeType, upgrade);
             upgradeLevels.Add(upgrade.UpgradeType, 0);
+        }
+
+        var areas = FindObjectsByType<ResourceArea>(FindObjectsSortMode.None);
+        foreach (var area in areas)
+        {
+            resourceAreas.Add(area.ResourceType, area);
         }
     }
 
@@ -58,9 +66,12 @@ public class UpgradeManager : MonoBehaviour
         if (upgrades.TryGetValue(upgradeType, out var upgrade))
         {
             float cost = GetCost(upgradeType);
-            int level = upgradeLevels[upgradeType];
             if (ResourceManager.Instance.Coins >= cost)
             {
+                ResourceManager.Instance.Coins -= cost;
+                upgradeLevels[upgradeType]++;
+                int level = upgradeLevels[upgradeType];
+
                 switch (upgradeType)
                 {
                     case UpgradeType.MegaMushroom:
@@ -69,10 +80,37 @@ public class UpgradeManager : MonoBehaviour
                     case UpgradeType.ImANumberOne:
                         ResourceManager.Instance.CoinIncomeMultiplier = upgrade.Effect(level);
                         break;
-                        //TODO: fill other effects
+                    case UpgradeType.SuperMarket:
+                        resourceAreas[ResourceType.Garlic].RegenRateMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.CoconutMall:
+                        resourceAreas[ResourceType.Garlic].MaxResourcesMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.WarioKart:
+                        resourceAreas[ResourceType.Bikes].RegenRateMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.TourdeWario:
+                        resourceAreas[ResourceType.Bikes].MaxResourcesMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.BulletCandy:
+                        resourceAreas[ResourceType.Candy].RegenRateMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.TwiceCandy:
+                        resourceAreas[ResourceType.Candy].MaxResourcesMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.WaluigiTime:
+                        resourceAreas[ResourceType.Waluigium].RegenRateMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.WaluigiWare:
+                        resourceAreas[ResourceType.Waluigium].MaxResourcesMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.TakeThatLosers:
+                        foreach (var resourceArea in resourceAreas) resourceArea.Value.WorkerWagesMultiplier = upgrade.Effect(level);
+                        break;
+                    case UpgradeType.DoubleMoney:
+                        break;
                 }
-                ResourceManager.Instance.Coins -= cost;
-                upgradeLevels[upgradeType]++;
+
             }
         }
     }

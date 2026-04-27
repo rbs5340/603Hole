@@ -9,7 +9,7 @@ public class UpgradeEntry : MonoBehaviour
     [SerializeField] private TextMeshProUGUI costText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Button upgradeButton;
-    [SerializeField] private TextMeshProUGUI upgradeButtonText;
+    //[SerializeField] private TextMeshProUGUI upgradeButtonText;
     private void Start()
     {
         if (UpgradeManager.Instance.Upgrades.TryGetValue(upgradeType, out var upgrade))
@@ -42,12 +42,12 @@ public class UpgradeEntry : MonoBehaviour
         if (UpgradeManager.Instance.IsUpgradable(upgradeType))
         {
             upgradeButton.interactable = true;
-            upgradeButtonText.text = "UPGRADE";
+            //upgradeButtonText.text = "UPGRADE";
         }
         else
         {
             upgradeButton.interactable = false;
-            upgradeButtonText.text = "TOO POOR";
+            //upgradeButtonText.text = "TOO POOR";
         }
     }
 }

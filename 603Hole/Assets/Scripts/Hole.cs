@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
+using static UnityEditor.PlayerSettings;
 using Random = UnityEngine.Random;
 
 public class Hole : MonoBehaviour
 {
     [SerializeField] private GameObject coinPrefab; // Prefab for the coin to spawn
+    [SerializeField] private Sprite mushroomSprite; 
 
     [SerializeField] private int coinsToSpawn = 1; // Number of coins to spawn when the hole is clicked
 
@@ -60,7 +63,21 @@ public class Hole : MonoBehaviour
 
     private void OnMouseDown()
     {
-        FillHole(coinsToSpawn * FillPerMushroom);
+        //FillHole(coinsToSpawn * FillPerMushroom);
+        bool verticalSide = Random.Range(0, 2)==1;
+        Vector2 startPos = verticalSide ? 
+            (new Vector2(Random.Range(0, 2) * Screen.width, Random.Range(0, Screen.height + 1))):
+            (new Vector2(Random.Range(0, Screen.width + 1),Random.Range(0, 2) * Screen.height ));
+        float theta = Random.Range(0, 2 * Mathf.PI);
+        var endPos = new Vector3(Mathf.Cos(theta) * (width) / 4, Mathf.Sin(theta) * (height) / 4);
+        endPos += transform.position;
+        IconProjectileHolder.Instance.Create(
+            startPos,
+            Camera.main.WorldToScreenPoint(endPos),
+            mushroomSprite,
+            () => FillHole(coinsToSpawn * FillPerMushroom),
+            1000
+            );
     }
 
     public void SpawnCoin()

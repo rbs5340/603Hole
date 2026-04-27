@@ -29,45 +29,62 @@ public class ResourceThrower : MonoBehaviour
 
     void AtTarget()
     {
-        switch(carriedResource)
+
+        switch (carriedResource)
         {
             case ResourceType.Garlic:
-                Hole.Instance.FillHole(2);
+                ThrowIcon(2);
                 idle = false;
 
                 break;
             case ResourceType.Bikes:
-                Hole.Instance.FillHole(2);
+                ThrowIcon(2);
                 idle = false;
 
                 break;
             case ResourceType.Candy:
-                Hole.Instance.FillHole(2);
+                ThrowIcon(2);
                 idle = false;
 
                 break;
             case ResourceType.Waluigium:
-                Hole.Instance.FillHole(100);
+                ThrowIcon(100);
                 idle = false;
                 break;
             default:
                 idle = true;
                 break;
         }
-        if(carriedResource == ResourceType.None)
+        if (carriedResource == ResourceType.None)
             targetPos = GetHighestResourceArea();
 
         targetPos.z = 0;
-        
 
+        void ThrowIcon(float fillAmount)
+        {
+            Hole hole = Hole.Instance;
+            var holeBounds = hole.GetComponent<SpriteRenderer>().bounds;
+            float endPointRandomness = 0.25f;
+            float endWorldPosX = Mathf.Lerp(holeBounds.min.x, holeBounds.max.x, Random.Range(0.5f - endPointRandomness, 0.5f + endPointRandomness));
+            float endWorldPosY = Mathf.Lerp(holeBounds.min.y, holeBounds.max.y, Random.Range(0.5f - endPointRandomness, 0.5f + endPointRandomness));
+            var endWorldPos = new Vector2(endWorldPosX, endWorldPosY);
+
+            IconProjectileHolder.Instance.Create(
+                Camera.main.WorldToScreenPoint(transform.position),
+                Camera.main.WorldToScreenPoint(endWorldPos),
+                IconProjectileHolder.GetResourceSprite(carriedResource),
+                () => Hole.Instance.FillHole(fillAmount),
+                250
+                );
+        }
     }
 
     private Vector3 GetHighestResourceArea()
     {
         float greatestAmount = 0;
         ResourceType highest = ResourceType.None;
-        
-        for ( int i = 1; i < 5; i++)
+
+        for (int i = 1; i < 5; i++)
         {
             ResourceType resourceType = (ResourceType)(i);
             float amount = ResourceManager.Instance.GetResourceAmount(resourceType);
@@ -95,7 +112,7 @@ public class ResourceThrower : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<ResourceArea>() != null && carriedResource == ResourceType.None && collision.gameObject.GetComponent<ResourceArea>().ResourceType == targetResource)
+        if (collision.gameObject.GetComponent<ResourceArea>() != null && carriedResource == ResourceType.None && collision.gameObject.GetComponent<ResourceArea>().ResourceType == targetResource)
         {
             carriedResource = collision.gameObject.GetComponent<ResourceArea>().ResourceType;
             targetPos = Hole.Instance.gameObject.transform.position;

@@ -39,7 +39,7 @@ public class ResourceManager : MonoBehaviour
         
         set { 
             coins = value;
-            coinDisplay.text = NumberFormatter.FormatLargeNumber(coins,0);
+            coinDisplay.text = NumberFormatter.FormatLargeInteger(coins,1);
         } 
     }
     public float Garlic { get { return garlic; } 
