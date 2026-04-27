@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Yoshi Egg
   Icon: {fileID: -260446117949173488, guid: 65b6c131c79648649a4112c21d240ffa, type: 3}
-  HFU: 25
-  GoldReq: 50
+  HFU: 30
+  GoldReq: 60
   WoodReq: 0
   WaterReq: 10
-  StoneReq: 15
+  StoneReq: 20
   GoopReq: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JuniorsClownCar
   m_EditorClassIdentifier: 
   Name: Junior's Clown Car
-  Icon: {fileID: 7675826601332790545, guid: b7899651819a7794ba4be88fd925e279, type: 3}
+  Icon: {fileID: -3510043043729255906, guid: bbac1e94a81e4ef4fb9075b9a428503a, type: 3}
   HFU: 20000
   GoldReq: 40000
   WoodReq: 1000

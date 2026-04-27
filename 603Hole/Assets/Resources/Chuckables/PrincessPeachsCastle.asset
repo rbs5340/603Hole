@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PrincessPeachsCastle
   m_EditorClassIdentifier: 
   Name: Princess Peach's Castle
-  Icon: {fileID: 7675826601332790545, guid: b7899651819a7794ba4be88fd925e279, type: 3}
+  Icon: {fileID: 8687104956602746676, guid: bd1662db4596c87409c74bf4045d10d1, type: 3}
   HFU: 500000
   GoldReq: 1000000
   WoodReq: 125000

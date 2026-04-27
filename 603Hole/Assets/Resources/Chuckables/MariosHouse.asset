@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MariosHouse
   m_EditorClassIdentifier: 
   Name: Mario's House
-  Icon: {fileID: 7675826601332790545, guid: b7899651819a7794ba4be88fd925e279, type: 3}
+  Icon: {fileID: -5371125077107912826, guid: d8b078c97e3c03f40ae0578f861fd417, type: 3}
   HFU: 100000
   GoldReq: 200000
   WoodReq: 10000
