@@ -1,0 +1,1443 @@
+fileFormatVersion: 2
+guid: 46804f21904c96d4caf620076f373fb2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2738513741207199792
+    second: waluigiummine_0
+  - first:
+      213: 5860171657206787144
+    second: waluigiummine_1
+  - first:
+      213: -4903010824054759955
+    second: waluigiummine_2
+  - first:
+      213: -2731309599411709451
+    second: waluigiummine_3
+  - first:
+      213: 7098584817390745452
+    second: waluigiummine_4
+  - first:
+      213: 8103482094924814105
+    second: waluigiummine_5
+  - first:
+      213: -7558246844279817390
+    second: waluigiummine_6
+  - first:
+      213: 3424959679825897503
+    second: waluigiummine_7
+  - first:
+      213: 8252001953264503814
+    second: waluigiummine_8
+  - first:
+      213: 7993797891495011286
+    second: waluigiummine_9
+  - first:
+      213: -3509719699470337640
+    second: waluigiummine_10
+  - first:
+      213: -1583118440529091331
+    second: waluigiummine_11
+  - first:
+      213: -4082298219798468524
+    second: waluigiummine_12
+  - first:
+      213: -5952857256032158202
+    second: waluigiummine_13
+  - first:
+      213: 6185009624199381438
+    second: waluigiummine_14
+  - first:
+      213: 2303976654045638867
+    second: waluigiummine_15
+  - first:
+      213: 4290271513612962379
+    second: waluigiummine_16
+  - first:
+      213: -5103464357259063564
+    second: waluigiummine_17
+  - first:
+      213: -8625574781382725704
+    second: waluigiummine_18
+  - first:
+      213: -4224348378170200691
+    second: waluigiummine_19
+  - first:
+      213: -1811084939147097525
+    second: waluigiummine_20
+  - first:
+      213: -705641925682685861
+    second: waluigiummine_21
+  - first:
+      213: 5781914173633811195
+    second: waluigiummine_22
+  - first:
+      213: 275859773650956760
+    second: waluigiummine_23
+  - first:
+      213: -7172132080666095834
+    second: waluigiummine_24
+  - first:
+      213: -7283209639688991200
+    second: waluigiummine_25
+  - first:
+      213: 6552920610231177305
+    second: waluigiummine_26
+  - first:
+      213: 3350884382551376778
+    second: waluigiummine_27
+  - first:
+      213: -6015477726606553094
+    second: waluigiummine_28
+  - first:
+      213: -8010721622720683608
+    second: waluigiummine_29
+  - first:
+      213: -5392247402052957481
+    second: waluigiummine_30
+  - first:
+      213: -9126910692015498222
+    second: waluigiummine_31
+  - first:
+      213: 8833094073958667109
+    second: waluigiummine_32
+  - first:
+      213: -4195867145338615232
+    second: waluigiummine_33
+  - first:
+      213: -2805944000034063914
+    second: waluigiummine_34
+  - first:
+      213: 2293523182935109779
+    second: waluigiummine_35
+  - first:
+      213: 7526074258639793679
+    second: waluigiummine_36
+  - first:
+      213: -3463738827865567646
+    second: waluigiummine_37
+  - first:
+      213: -1667533511511205754
+    second: waluigiummine_38
+  - first:
+      213: -772714789305936959
+    second: waluigiummine_39
+  - first:
+      213: -253219800836301479
+    second: waluigiummine_40
+  - first:
+      213: -7313564967114442952
+    second: waluigiummine_41
+  - first:
+      213: 7892689030749753995
+    second: waluigiummine_42
+  - first:
+      213: 5304098311334671540
+    second: waluigiummine_43
+  - first:
+      213: -2377660844928066550
+    second: waluigiummine_44
+  - first:
+      213: 8779626710260071354
+    second: waluigiummine_45
+  - first:
+      213: -9156747430911407510
+    second: waluigiummine_46
+  - first:
+      213: -2845965647692736505
+    second: waluigiummine_47
+  - first:
+      213: 6959853453113506187
+    second: waluigiummine_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: waluigiummine_0
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 400
+        width: 2316
+        height: 2455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0306e250db7210620800000000000000
+      internalID: 2738513741207199792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_1
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 1987
+        width: 82
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c6f9ed213835150800000000000000
+      internalID: 5860171657206787144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_2
+      rect:
+        serializedVersion: 2
+        x: 2419
+        y: 2202
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded125ef1a105fbb0800000000000000
+      internalID: -4903010824054759955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_3
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 2182
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f95373f360781ad0800000000000000
+      internalID: -2731309599411709451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_4
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 2179
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c677e80184d338260800000000000000
+      internalID: 7098584817390745452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_5
+      rect:
+        serializedVersion: 2
+        x: 2424
+        y: 2168
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9175bbff70a557070800000000000000
+      internalID: 8103482094924814105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_6
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 2149
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bfbf95a86bb1790800000000000000
+      internalID: -7558246844279817390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_7
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 2156
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18ee0ebea6e78f20800000000000000
+      internalID: 3424959679825897503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_8
+      rect:
+        serializedVersion: 2
+        x: 2444
+        y: 2152
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c09263e00058270800000000000000
+      internalID: 8252001953264503814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_9
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 2140
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3a3d054dcafee60800000000000000
+      internalID: 7993797891495011286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_10
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 2122
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89931e35788fa4fc0800000000000000
+      internalID: -3509719699470337640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_11
+      rect:
+        serializedVersion: 2
+        x: 2444
+        y: 2115
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4a4e28a22a70ae0800000000000000
+      internalID: -1583118440529091331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_12
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 2110
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458e3b5e563c857c0800000000000000
+      internalID: -4082298219798468524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_13
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 2105
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60eb89f7dd3336da0800000000000000
+      internalID: -5952857256032158202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_14
+      rect:
+        serializedVersion: 2
+        x: 2422
+        y: 2093
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1c6cecb7195d550800000000000000
+      internalID: 6185009624199381438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_15
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 2085
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0fe235f8e59ff10800000000000000
+      internalID: 2303976654045638867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_16
+      rect:
+        serializedVersion: 2
+        x: 2427
+        y: 2082
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ac0e6f53b1a8b30800000000000000
+      internalID: 4290271513612962379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_17
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 2069
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fec4b5d43adc29b0800000000000000
+      internalID: -5103464357259063564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_18
+      rect:
+        serializedVersion: 2
+        x: 2418
+        y: 2061
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf6d14cf6dcb4880800000000000000
+      internalID: -8625574781382725704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_19
+      rect:
+        serializedVersion: 2
+        x: 2409
+        y: 2039
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8deaa718891065c0800000000000000
+      internalID: -4224348378170200691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_20
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 2027
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ac318e7dbbdd6e0800000000000000
+      internalID: -1811084939147097525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_21
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 2003
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b589f01486e0536f0800000000000000
+      internalID: -705641925682685861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_22
+      rect:
+        serializedVersion: 2
+        x: 2422
+        y: 2016
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf25d399e4c7d3050800000000000000
+      internalID: 5781914173633811195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_23
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 1995
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1f848a00d04d300800000000000000
+      internalID: 275859773650956760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_24
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 1968
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fc6b94fd7777c90800000000000000
+      internalID: -7172132080666095834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_25
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 1974
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e03a9bb67dcea90800000000000000
+      internalID: -7283209639688991200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_26
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 456
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9505a2e7396a0fa50800000000000000
+      internalID: 6552920610231177305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_27
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 457
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a830169979bb08e20800000000000000
+      internalID: 3350884382551376778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_28
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 454
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff875701eab48ca0800000000000000
+      internalID: -6015477726606553094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_29
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 460
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a16133702334d090800000000000000
+      internalID: -8010721622720683608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_30
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 451
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da4c93ae83ea25b0800000000000000
+      internalID: -5392247402052957481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_31
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 457
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c93b10513b65180800000000000000
+      internalID: -9126910692015498222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_32
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 465
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5631ae1b244759a70800000000000000
+      internalID: 8833094073958667109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_33
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 455
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a0c5ddf0945c5c0800000000000000
+      internalID: -4195867145338615232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_34
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 461
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d9b45a6cc84f09d0800000000000000
+      internalID: -2805944000034063914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_35
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 464
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39078faee2b34df10800000000000000
+      internalID: 2293523182935109779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_36
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 461
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0eaf63d9acf17860800000000000000
+      internalID: 7526074258639793679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_37
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 462
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e485243e35eefc0800000000000000
+      internalID: -3463738827865567646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_38
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 456
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68890533b1bbbd8e0800000000000000
+      internalID: -1667533511511205754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_39
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 462
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c39abe3ef3c645f0800000000000000
+      internalID: -772714789305936959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_40
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 460
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d9e09cee16c7cf0800000000000000
+      internalID: -253219800836301479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_41
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 456
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837f66d496ff08a90800000000000000
+      internalID: -7313564967114442952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_42
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 461
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8216703bd6788d60800000000000000
+      internalID: 7892689030749753995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_43
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 454
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b43ad4df41fb9940800000000000000
+      internalID: 5304098311334671540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_44
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 443
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c15b51f0ad00fd0800000000000000
+      internalID: -2377660844928066550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_45
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 443
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb359df9ff77d970800000000000000
+      internalID: 8779626710260071354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_46
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 457
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a0e82e9b2bce080800000000000000
+      internalID: -9156747430911407510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_47
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 447
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7085f4e62591188d0800000000000000
+      internalID: -2845965647692736505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waluigiummine_48
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 444
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b893b9937dd569060800000000000000
+      internalID: 6959853453113506187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      waluigiummine_0: 2738513741207199792
+      waluigiummine_1: 5860171657206787144
+      waluigiummine_10: -3509719699470337640
+      waluigiummine_11: -1583118440529091331
+      waluigiummine_12: -4082298219798468524
+      waluigiummine_13: -5952857256032158202
+      waluigiummine_14: 6185009624199381438
+      waluigiummine_15: 2303976654045638867
+      waluigiummine_16: 4290271513612962379
+      waluigiummine_17: -5103464357259063564
+      waluigiummine_18: -8625574781382725704
+      waluigiummine_19: -4224348378170200691
+      waluigiummine_2: -4903010824054759955
+      waluigiummine_20: -1811084939147097525
+      waluigiummine_21: -705641925682685861
+      waluigiummine_22: 5781914173633811195
+      waluigiummine_23: 275859773650956760
+      waluigiummine_24: -7172132080666095834
+      waluigiummine_25: -7283209639688991200
+      waluigiummine_26: 6552920610231177305
+      waluigiummine_27: 3350884382551376778
+      waluigiummine_28: -6015477726606553094
+      waluigiummine_29: -8010721622720683608
+      waluigiummine_3: -2731309599411709451
+      waluigiummine_30: -5392247402052957481
+      waluigiummine_31: -9126910692015498222
+      waluigiummine_32: 8833094073958667109
+      waluigiummine_33: -4195867145338615232
+      waluigiummine_34: -2805944000034063914
+      waluigiummine_35: 2293523182935109779
+      waluigiummine_36: 7526074258639793679
+      waluigiummine_37: -3463738827865567646
+      waluigiummine_38: -1667533511511205754
+      waluigiummine_39: -772714789305936959
+      waluigiummine_4: 7098584817390745452
+      waluigiummine_40: -253219800836301479
+      waluigiummine_41: -7313564967114442952
+      waluigiummine_42: 7892689030749753995
+      waluigiummine_43: 5304098311334671540
+      waluigiummine_44: -2377660844928066550
+      waluigiummine_45: 8779626710260071354
+      waluigiummine_46: -9156747430911407510
+      waluigiummine_47: -2845965647692736505
+      waluigiummine_48: 6959853453113506187
+      waluigiummine_5: 8103482094924814105
+      waluigiummine_6: -7558246844279817390
+      waluigiummine_7: 3424959679825897503
+      waluigiummine_8: 8252001953264503814
+      waluigiummine_9: 7993797891495011286
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,7 +16,7 @@ MonoBehaviour:
   Icon: {fileID: 6658670927973994472, guid: 950e49f028297674a83b83ee915bfa82, type: 3}
   HFU: 50
   GoldReq: 100
-  WoodReq: 5
-  WaterReq: 25
+  WoodReq: 10
+  WaterReq: 20
   StoneReq: 20
   GoopReq: 0

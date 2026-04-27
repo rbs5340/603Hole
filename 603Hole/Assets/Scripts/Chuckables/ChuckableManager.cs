@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class ChuckableManager : MonoSingleton<ChuckableManager>
 {
-    Chuckable[] chuckables;
+    List<Chuckable> chuckables = new();
     Hole theHole;
     public List<Chuckable> Chuckables => chuckables.ToList();
 
@@ -22,7 +22,17 @@ public class ChuckableManager : MonoSingleton<ChuckableManager>
     protected override void Awake()
     {
         base.Awake();
-        chuckables = Resources.LoadAll<Chuckable>("Chuckables");
+        var _chuckables = Resources.LoadAll<Chuckable>("Chuckables");
+        foreach (var chuckable in _chuckables)
+        {
+            var new_chuck = Instantiate(chuckable);
+            new_chuck.GoldReq /= 2;
+            new_chuck.WoodReq /= 2;
+            new_chuck.StoneReq /= 2;
+            new_chuck.WaterReq /= 2;
+            new_chuck.GoopReq /= 2;
+            chuckables.Add(new_chuck);
+        }
         theHole = FindAnyObjectByType<Hole>();
     }
 
