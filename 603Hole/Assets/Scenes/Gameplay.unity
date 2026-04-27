@@ -5115,6 +5115,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3512642786199570384, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8450973052440857525, guid: 645fc075531357a40955602fb85c4d23, type: 3}
+    - target: {fileID: 3512642786199570384, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_Color.b
       value: 0.6476059
       objectReference: {fileID: 0}
@@ -5272,7 +5276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7531924818268351879, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_text
-      value: Grocery Store
+      value: Garlic Patch
       objectReference: {fileID: 0}
     - target: {fileID: 8648284499346669878, guid: 008bd677358321f4186c7a5053a9f818, type: 3}
       propertyPath: m_Name
