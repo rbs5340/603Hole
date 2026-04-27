@@ -45,13 +45,14 @@ public class IconProjectile : MonoBehaviour
         this.startPos = startPos;
         this.endPos = endPos;
         controlPos = new Vector2(Mathf.Lerp(startPos.x, endPos.x, Random.Range(0.4f, 0.6f)),
-            Mathf.LerpUnclamped(startPos.y, maxHeight, Random.Range(-0.1f, 1.0f)));
+            Mathf.LerpUnclamped(Mathf.Max(startPos.y, endPos.y), maxHeight, Random.Range(-0.1f, 1.0f)));
 
         (transform as RectTransform).anchoredPosition = startPos;
 
         image.sprite = sprite;
         callback.AddListener(callbackAction);
-        scaleFactor = Mathf.Abs(endPos.x - startPos.x);
+        scaleFactor = Vector2.Distance(startPos, endPos);
         t = 0;
     }
+
 }

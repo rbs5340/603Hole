@@ -13,4 +13,11 @@ public static class NumberFormatter
         else if (rawValue < 1e+6) return $"{(rawValue / 1e+3).ToString($"F{digits}")}k";
         else return $"{(rawValue / 1e+6).ToString($"F{digits}")}M";
     }
+    public static string FormatLargeInteger(float rawValue, int digits = 1)
+    {
+        if (digits < 0) digits = 0;
+        if (rawValue < 1e+3) return rawValue.ToString($"F{0}");
+        else if (rawValue < 1e+6) return $"{(rawValue / 1e+3).ToString($"F{digits}")}k";
+        else return $"{(rawValue / 1e+6).ToString($"F{digits}")}M";
+    }
 }

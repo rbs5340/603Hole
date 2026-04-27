@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -7,7 +8,11 @@ public class ResourceArea : MonoBehaviour
 {
     [SerializeField] private int maxResources;
 
+    private int MaxResources => Mathf.FloorToInt(maxResources * MaxResourcesMultiplier);
+    public float MaxResourcesMultiplier { get; set; } = 1;
+
     [SerializeField] private float regenRate;
+    public float RegenRateMultiplier { get; set; } = 1;
 
     [SerializeField] private ResourceType resourceType;
 
@@ -17,7 +22,11 @@ public class ResourceArea : MonoBehaviour
 
     [SerializeField] private TMP_Text displayResourceAmount;
 
+    [SerializeField] private Image displayFillerImage;
+
     [SerializeField] private float workerWages;
+
+    public float WorkerWagesMultiplier { get; set; } = 1;
 
     [SerializeField] private TMP_Text workerNumDisplay;
 
@@ -35,9 +44,9 @@ public class ResourceArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float wagesCost = numWorkers * workerWages * Time.deltaTime;
+        float wagesCost = numWorkers * workerWages * WorkerWagesMultiplier * Time.deltaTime;
 
-        if(ResourceManager.Instance.Coins < wagesCost)
+        if (ResourceManager.Instance.Coins < wagesCost)
         {
             return;
         }
@@ -56,7 +65,7 @@ public class ResourceArea : MonoBehaviour
             if (numResources < resourcesCollected)
             {
                 resourcesCollected = numResources;
-            }    
+            }
             ResourceManager.Instance.AddResource(resourceType, resourcesCollected);
 
             numResources -= resourcesCollected;
@@ -66,12 +75,13 @@ public class ResourceArea : MonoBehaviour
                 numResources = 0;
             }
         }
-        else if (numResources < maxResources)
+        else if (numResources < MaxResources)
         {
-            numResources += regenRate * Time.deltaTime;
+            numResources += regenRate * RegenRateMultiplier * Time.deltaTime;
         }
 
-        displayResourceAmount.text = ((int)numResources + " / " + (int)maxResources).ToString();
+        displayResourceAmount.text = ((int)numResources + " / " + (int)MaxResources).ToString();
+        displayFillerImage.fillAmount = 1 - numResources / MaxResources;//Because it's actually a hider
     }
 
     public void AddWorker()

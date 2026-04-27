@@ -51,7 +51,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
   projectilePrefab: {fileID: 7211259611983487319}
+  coinIcon: {fileID: 4156548765680988246, guid: 6ec01f571468a4248b69ca5b9aec89df, type: 3}
+  garlicIcon: {fileID: -8944997348610683000, guid: 13a74f2b982d74d49b3795217d1365a6, type: 3}
+  bikeIcon: {fileID: 5371294221566652503, guid: 400801ddfbcb8974094557ebfb804d30, type: 3}
+  candyIcon: {fileID: -2757008047180432429, guid: ec4129522ce0d164398658fae7fbe9f5, type: 3}
+  waluigiumIcon: {fileID: 7739608185410055294, guid: 0c5ba32c2e0265844bf47c12ab6218a5, type: 3}
   projectileSpeed: 500
+  maxAngularSpeed: 180
 --- !u!1001 &6166512685801545882
 PrefabInstance:
   m_ObjectHideFlags: 0
