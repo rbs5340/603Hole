@@ -46,6 +46,15 @@ public class ResourceArea : MonoBehaviour
     {
         float wagesCost = numWorkers * workerWages * WorkerWagesMultiplier * Time.deltaTime;
 
+        if (numResources < 0)
+        {
+            numResources = 0;
+        }
+        else if (numResources < MaxResources)
+        {
+            numResources += regenRate * RegenRateMultiplier * Time.deltaTime;
+        }
+
         if (ResourceManager.Instance.Coins < wagesCost)
         {
             return;
@@ -68,14 +77,7 @@ public class ResourceArea : MonoBehaviour
 
         numResources -= resourcesCollected;
 
-        if (numResources < 0)
-        {
-            numResources = 0;
-        }
-        else if (numResources < MaxResources)
-        {
-            numResources += regenRate * RegenRateMultiplier * Time.deltaTime;
-        }
+        
 
         displayResourceAmount.text = ((int)numResources + " / " + (int)MaxResources).ToString();
         displayFillerImage.fillAmount = 1 - numResources / MaxResources;//Because it's actually a hider
