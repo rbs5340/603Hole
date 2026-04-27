@@ -50,23 +50,21 @@ public class ResourceArea : MonoBehaviour
 
         float resourcesCollected = workRate * numWorkers * Time.deltaTime;
 
-        if (numWorkers > 0)
+
+        if (numResources < resourcesCollected)
         {
+            resourcesCollected = numResources;
+        }    
+        ResourceManager.Instance.AddResource(resourceType, resourcesCollected);
 
-            if (numResources < resourcesCollected)
-            {
-                resourcesCollected = numResources;
-            }    
-            ResourceManager.Instance.AddResource(resourceType, resourcesCollected);
+        numResources -= resourcesCollected;
 
-            numResources -= resourcesCollected;
-
-            if (numResources < 0)
-            {
-                numResources = 0;
-            }
+        if (numResources < 0)
+        {
+            numResources = 0;
         }
-        else if (numResources < maxResources)
+
+        if (numResources < maxResources)
         {
             numResources += regenRate * Time.deltaTime;
         }
